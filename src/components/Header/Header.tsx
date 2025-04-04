@@ -3,7 +3,6 @@ import {
     Breadcrumb,
     BreadcrumbItem,
     BreadcrumbLink,
-    Button,
     Container,
     Flex,
     IconButton,
@@ -11,17 +10,26 @@ import {
     useMediaQuery,
 } from '@chakra-ui/react';
 import { BiMenu } from 'react-icons/bi';
-import { BsBookmarkHeart, BsEmojiHeartEyes, BsPeopleFill } from 'react-icons/bs';
 
 import CardAvatar from '../CardAvatar/CardAvatar';
 import Logo from '../Logo/Logo';
+import ProfileNotification from '../ProfileNotification/ProfileNotification';
 
 const Header = () => {
     const [isLargerThan1440] = useMediaQuery('(min-width: 1440px)');
 
     return (
-        <Box as='header' bg='lime.50'>
-            <Container p={['4', '4', '4', '5']} py={['2', '2', '2', '2', '4']}>
+        <Box
+            as='header'
+            bg='lime.50'
+            pos='fixed'
+            top='0'
+            left='0'
+            w='100%'
+            zIndex='2'
+            data-test-id='header'
+        >
+            <Container p={['4', '4', '4', '5']} py={['2', '2', '2', '2', '4']} pos='relative'>
                 <Flex align='center'>
                     <Box>
                         <Logo />
@@ -41,37 +49,6 @@ const Header = () => {
                     ) : (
                         <>
                             <Spacer />
-                            <Box mr={['3', '3', '3', '4']}>
-                                <Flex>
-                                    <Button
-                                        size='xs'
-                                        variant='ghost'
-                                        colorScheme='lime.50'
-                                        leftIcon={<BsBookmarkHeart color='black' />}
-                                        color='lime.600'
-                                    >
-                                        185
-                                    </Button>
-                                    <Button
-                                        size='xs'
-                                        variant='ghost'
-                                        colorScheme='lime.50'
-                                        leftIcon={<BsPeopleFill color='black' />}
-                                        color='lime.600'
-                                    >
-                                        589
-                                    </Button>
-                                    <Button
-                                        size='xs'
-                                        variant='ghost'
-                                        colorScheme='lime.50'
-                                        leftIcon={<BsEmojiHeartEyes color='black' />}
-                                        color='lime.600'
-                                    >
-                                        587
-                                    </Button>
-                                </Flex>
-                            </Box>
                             <IconButton
                                 colorScheme='lime.50'
                                 variant='ghost'
@@ -79,9 +56,11 @@ const Header = () => {
                                 size='lg'
                                 rounded='50'
                                 icon={<BiMenu size='24px' />}
+                                mr='0'
                             />
                         </>
                     )}
+                    <ProfileNotification />
                 </Flex>
             </Container>
         </Box>

@@ -1,0 +1,11 @@
+.profileNotification {
+    position: absolute;
+}
+
+.profileNotification.column {
+    top: 80px;
+    right: 0;
+    flex-direction: column;
+    gap: 24px;
+    padding: 16px 56px;
+}
