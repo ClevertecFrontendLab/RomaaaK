@@ -11,15 +11,28 @@ const breakpoints = {
 const colors = {
     lime: {
         50: '#ffffd3',
+        100: '#eaffc7',
+        300: '#c4ff61',
         600: '#2db100',
     },
-    blackAlpha: 'rgb(0 0 0 / 64%)',
+    blackAlpha: {
+        400: 'rgb(0 0 0 / 24%)',
+        700: 'rgb(0 0 0 / 64%)',
+    },
 };
 
 const components = {
     Container: {
         baseStyle: {
             maxW: '1920px',
+        },
+    },
+    Link: {
+        baseStyle: {
+            textDecor: 'none',
+            _hover: {
+                textDecor: 'none',
+            },
         },
     },
 };
