@@ -11,7 +11,7 @@ const CardAvatar = () => (
                 <Heading fontSize='18px' color='black' lineHeight={7} letterSpacing={0.1}>
                     Екатерина Константинопольская
                 </Heading>
-                <Text fontSize='sm' lineHeight={4} color='blackAlpha' letterSpacing={0.1}>
+                <Text fontSize='sm' lineHeight={4} color='blackAlpha.700' letterSpacing={0.1}>
                     @bake_and_pie
                 </Text>
             </CardBody>
