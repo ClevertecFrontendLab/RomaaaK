@@ -1,6 +1,7 @@
 import { Box, Button, Container, Flex, Text, VStack } from '@chakra-ui/react';
 import { BiLogOut } from 'react-icons/bi';
 
+import Footer from '~/components/Footer/Footer';
 import Header from '~/components/Header/Header';
 import Menu from '~/components/Menu/Menu';
 import menu from '~/menu';
@@ -73,6 +74,7 @@ function App() {
                     <Box minW='280px' display={['none', 'none', 'none', 'none', 'block']} />
                 </Flex>
             </Container>
+            <Footer />
         </>
     );
 }
